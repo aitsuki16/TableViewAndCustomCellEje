@@ -10,6 +10,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var TableView: UITableView!
     
+    let af = APIFetchHandler()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         TableView.dataSource = self
@@ -17,7 +19,7 @@ class ViewController: UIViewController {
         
         TableView.register(UINib(nibName: "CustomCell", bundle: nil), forCellReuseIdentifier: "CustomCell")
         TableView.rowHeight = 70
-        
+        af.fetchData(completion: { _,_ in })
         
     }
     let rainbow: [UIColor] = [.red, .yellow, .green, .orange, .blue, .purple, .magenta]
