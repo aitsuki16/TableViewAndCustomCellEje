@@ -37,7 +37,6 @@
 		CE9021722ACD0C7D00F55DE8 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		CE9021962AD24B7600F55DE8 /* APIFetchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetchHandler.swift; sourceTree = "<group>"; };
 		CECD19A32AD63FB000103BD8 /* TableViewAndCutomCellEje.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewAndCutomCellEje.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CECD19A42AD6419300103BD8 /* TableViewAndCutomCellEje.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = TableViewAndCutomCellEje.app; path = "../../../../Library/Developer/Xcode/DerivedData/TableViewAndCutomCellEje-fbfcchszmqihmgeeqpxbyjilwqmd/Build/Products/Debug-iphonesimulator/TableViewAndCutomCellEje.app"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +72,6 @@
 		CE90212C2AC7B04100F55DE8 = {
 			isa = PBXGroup;
 			children = (
-				CE9021962AD24B7600F55DE8 /* APIFetchHandler.swift */,
 				CE9021372AC7B04100F55DE8 /* TableViewAndCutomCellEje */,
 				B87271DB70747FF30BF4F9A2 /* Pods */,
 				CECD19A32AD63FB000103BD8 /* TableViewAndCutomCellEje.app */,
@@ -84,12 +82,12 @@
 		CE9021372AC7B04100F55DE8 /* TableViewAndCutomCellEje */ = {
 			isa = PBXGroup;
 			children = (
+				CE9021962AD24B7600F55DE8 /* APIFetchHandler.swift */,
 				CE9021382AC7B04100F55DE8 /* AppDelegate.swift */,
 				CE9021722ACD0C7D00F55DE8 /* ArticleViewController.swift */,
 				CE90214C2AC7B17B00F55DE8 /* CustomCell.swift */,
 				CE90214D2AC7B17B00F55DE8 /* CustomCell.xib */,
 				CE90213A2AC7B04100F55DE8 /* SceneDelegate.swift */,
-				CECD19A42AD6419300103BD8 /* TableViewAndCutomCellEje.app */,
 				CE90213C2AC7B04100F55DE8 /* ViewController.swift */,
 				CE90213E2AC7B04100F55DE8 /* Main.storyboard */,
 				CE9021412AC7B04300F55DE8 /* Assets.xcassets */,
@@ -149,7 +147,7 @@
 			);
 			mainGroup = CE90212C2AC7B04100F55DE8;
 			packageReferences = (
-				CE9021982AD24C9400F55DE8 /* XCRemoteSwiftPackageReference "swift-algorithms.git" */,
+				CE9021982AD24C9400F55DE8 /* XCRemoteSwiftPackageReference "swift-algorithms" */,
 			);
 			productRefGroup = CE90212C2AC7B04100F55DE8;
 			projectDirPath = "";
@@ -374,7 +372,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FL7354HD3;
+				DEVELOPMENT_TEAM = 8BG588F6G9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TableViewAndCutomCellEje/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -403,7 +401,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FL7354HD3;
+				DEVELOPMENT_TEAM = 8BG588F6G9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TableViewAndCutomCellEje/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -448,7 +446,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CE9021982AD24C9400F55DE8 /* XCRemoteSwiftPackageReference "swift-algorithms.git" */ = {
+		CE9021982AD24C9400F55DE8 /* XCRemoteSwiftPackageReference "swift-algorithms" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-algorithms.git";
 			requirement = {
@@ -461,7 +459,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		CE9021992AD24C9400F55DE8 /* Algorithms */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CE9021982AD24C9400F55DE8 /* XCRemoteSwiftPackageReference "swift-algorithms.git" */;
+			package = CE9021982AD24C9400F55DE8 /* XCRemoteSwiftPackageReference "swift-algorithms" */;
 			productName = Algorithms;
 		};
 /* End XCSwiftPackageProductDependency section */

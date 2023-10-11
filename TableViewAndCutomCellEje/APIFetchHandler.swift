@@ -11,12 +11,12 @@ import Alamofire
 class APIFetchHandler {
     
     func fetchData(completion: @escaping ([Article]?, Error?) -> Void) {
-        print("Fetching data...") //
         AF.request("https://qiita.com/api/v2/items").responseJSON { response in
             switch response.result {
             case .success(let value):
                 if let responseValue = value as? [[String: Any]] {
                     do {
+                        print(responseValue)
                         let jsonData = try JSONSerialization.data(withJSONObject: responseValue)
                         let decoder = JSONDecoder()
                         let articles = try decoder.decode([Article].self, from: jsonData)
