@@ -9,48 +9,34 @@ import Alamofire
 
 
 class APIFetchHandler {
-    
     func fetchData(completion: @escaping ([Article]?, Error?) -> Void) {
-        AF.request("https://qiita.com/api/v2/items").responseJSON { response in
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        AF.request("https://qiita.com/api/v2/items").responseDecodable(of: [Article].self){ response in
             switch response.result {
-            case .success(let value):
-                if let responseValue = value as? [[String: Any]] {
-                    do {
-                        print(responseValue)
-                        let jsonData = try JSONSerialization.data(withJSONObject: responseValue)
-                        let decoder = JSONDecoder()
-                        let articles = try decoder.decode([Article].self, from: jsonData)
-                        
-                        print("Parsed Articles:")
-                        print(articles)
-                        
-                        completion(articles, nil)
-                    } catch {
-                        print("JSON Parsing Error:", error)
-                        completion(nil, error)
-                    }
+            case .success:
+                if let articles = response.value {
+                    print("articles: \(articles)")
                 } else {
-                    
-                    print("Invalid response data")
-                    completion(nil, NSError(domain: "Invalid response data", code: 0, userInfo: nil))
+                    print("articles is nil")
                 }
             case .failure(let error):
-                print("Network Request Error:", error)
-                completion(nil, error)
+                print(error)
             }
         }
     }
+    
 }
-
 struct Article: Codable {
-    let title: String?
+    let title: String
     let url: URL
-    let updated_at: Date?
-    let user: User?
+    let updatedAt: String?
+    let user: User
     
     struct User: Codable {
-        let id: Int?
-        let profileImageUrl: URL?
-        let name: String?
+        let id: String
+        let profile_image_url: URL
+        let name: String
+        
     }
 }
