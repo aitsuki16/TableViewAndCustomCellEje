@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomCell: UITableViewCell {
+class CustomCelloN: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
